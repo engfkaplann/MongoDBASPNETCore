@@ -41,13 +41,14 @@ namespace MongoDBASPNETCore.Controllers
             _musicService.Create(value);
         }
 
+        // PUT: api/Music/Put
         [HttpPut]
         public void Put([FromBody] UserMusicFavorite value)
         {
             _musicService.Update(value.id, value);
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/Music/Delete/id
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
